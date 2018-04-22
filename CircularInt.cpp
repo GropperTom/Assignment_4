@@ -2,7 +2,7 @@
 
 CircularInt::CircularInt(int min, int max) {}
 CircularInt::CircularInt() {}
-CircularInt CircularInt::operator=(const CircularInt & other)
+CircularInt& CircularInt::operator=(const CircularInt & other)
 {
 	return CircularInt();
 }
