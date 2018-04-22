@@ -1,9 +1,9 @@
 #pragma once
 
-using namespace std;
-
 class ostream;
 class istream;
+
+using namespace std;
 
 class CircularInt {
 
