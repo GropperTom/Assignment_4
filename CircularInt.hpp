@@ -2,6 +2,9 @@
 
 using namespace std;
 
+class ostream;
+class istream;
+
 class CircularInt {
 
 	int min;
@@ -14,150 +17,151 @@ public:
 	CircularInt(int min, int max);
 
 	// *** Operators *** //
-	// *** Arithmetic *** //
-	// *** Assignment *** //
+		// *** Arithmetic *** //
+			// *** Assignment *** //
 	CircularInt& operator=(const CircularInt& other);
 
-	// *** Addition *** //
+			// *** Addition *** //
 	CircularInt& operator+(const CircularInt& other);
 	CircularInt& operator+(const int& other);
 	friend CircularInt& operator+(const int& a, CircularInt b);
 
-	// *** Substraction *** //
+			// *** Substraction *** //
 	CircularInt& operator-(const CircularInt& other);
 	CircularInt& operator-(const int& other);
 	friend CircularInt& operator-(const int& a, CircularInt b);
 
-	// *** Negative *** //
+			// *** Negative *** //
 	CircularInt& operator-();
 
-	// *** Multiplaication *** //
+			// *** Multiplaication *** //
 	CircularInt& operator*(const CircularInt& other);
 	CircularInt& operator*(const int& other);
 	friend CircularInt& operator*(const int& a, CircularInt b);
 
-	// *** Division *** //
+			// *** Division *** //
 	CircularInt& operator/(const CircularInt& other);
 	CircularInt& operator/(const int& other);
 	friend CircularInt& operator/(const int& a, CircularInt b);
 
-	// *** Modulus *** //
+			// *** Modulus *** //
 	CircularInt& operator%(const CircularInt& other);
 	CircularInt& operator%(const int& other);
 	friend CircularInt& operator%(const int& a, CircularInt b);
 
-	// *** Compound Addition *** //
+			// *** Compound Addition *** //
 	CircularInt& operator+=(const CircularInt& other);
 	CircularInt& operator+=(const int& other);
 
-	// *** Compound Substraction *** //
+			// *** Compound Substraction *** //
 	CircularInt& operator-=(const CircularInt& other);
 	CircularInt& operator-=(const int& other);
 
-	// *** Compound Multiplication *** //
+			// *** Compound Multiplication *** //
 	CircularInt& operator*=(const CircularInt& other);
 	CircularInt& operator*=(const int& other);
 
-	// *** Compound Division *** //
+			// *** Compound Division *** //
 	CircularInt& operator/=(const CircularInt& other);
 	CircularInt& operator/=(const int& other);
 
-	// *** Compound Modulus *** //
+			// *** Compound Modulus *** //
 	CircularInt& operator%=(const CircularInt& other);
 	CircularInt& operator%=(const int& other);
 
-	// *** Increment *** //
+			// *** Increment *** //
 	CircularInt& operator++();
 	CircularInt operator++(int);
 
-	// *** Decrement *** //
+			// *** Decrement *** //
 	CircularInt& operator--();
 	CircularInt operator--(int);
 
-	// *** Bitwise *** //
-	// *** AND *** //
+		// *** Bitwise *** //
+			// *** AND *** //
 	CircularInt& operator&(const CircularInt& other);
 	CircularInt& operator&(const int& other);
 	friend CircularInt& operator&(const int& a, CircularInt b);
 
-	// *** OR *** //
+			// *** OR *** //
 	CircularInt& operator|(const CircularInt& other);
 	CircularInt& operator|(const int& other);
 	friend CircularInt& operator|(const int& a, CircularInt b);
 
-	// *** XOR *** //
+			// *** XOR *** //
 	CircularInt& operator^(const CircularInt& other);
 	CircularInt& operator^(const int& other);
 	friend CircularInt& operator^(const int& a, CircularInt b);
 
-	// *** Ones Complement *** //
+			// *** Ones Complement *** //
 	CircularInt& operator~();
 
-	// *** Left Shift *** //
+			// *** Left Shift *** //
 	CircularInt& operator<<(const CircularInt& other);
 	CircularInt& operator<<(const int& other);
 	friend CircularInt& operator<<(const int& a, CircularInt b);
 
-	// *** Right Shift *** //
+			// *** Right Shift *** //
 	CircularInt& operator>>(const CircularInt& other);
 	CircularInt& operator>>(const int& other);
 	friend CircularInt& operator>>(const int& a, CircularInt b);
 
-	// *** Compound AND *** //
+			// *** Compound AND *** //
 	CircularInt& operator&=(const CircularInt& other);
 	CircularInt& operator&=(const int& other);
 
-	// *** Compound OR *** //
+			// *** Compound OR *** //
 	CircularInt& operator|=(const CircularInt& other);
 	CircularInt& operator|=(const int& other);
 
-	// *** Compound XOR *** //
+			// *** Compound XOR *** //
 	CircularInt& operator^=(const CircularInt& other);
 	CircularInt& operator^=(const int& other);
 
-	// *** Compound Left Shift *** //
+			// *** Compound Left Shift *** //
 	CircularInt& operator<<=(const CircularInt& other);
 	CircularInt& operator<<=(const int& other);
 
-	// *** Compound Right Shift *** //
+			// *** Compound Right Shift *** //
 	CircularInt& operator>>=(const CircularInt& other);
 	CircularInt& operator>>=(const int& other);
 
-	// *** Relational *** //
-	// *** Equlity *** //
+		// *** Relational *** //
+			// *** Equlity *** //
 	bool& operator==(const CircularInt& other);
 	bool& operator==(const int& other);
 	friend CircularInt& operator==(const int& a, CircularInt b);
 
-	// *** Inequality *** //
+			// *** Inequality *** //
 	bool& operator!=(const CircularInt& other);
 	bool& operator!=(const int& other);
 	friend bool& operator!=(const int& a, CircularInt b);
 
-	// *** Greater Than *** //
+			// *** Greater Than *** //
 	bool& operator>(const CircularInt& other);
 	bool& operator>(const int& other);
 	friend bool& operator>(const int& a, CircularInt b);
 
-	// *** Less Than *** //
+			// *** Less Than *** //
 	bool& operator<(const CircularInt& other);
 	bool& operator<(const int& other);
 	friend bool& operator<(const int& a, CircularInt b);
 
-	// *** Greater Than Or Equal To *** //
+			// *** Greater Than Or Equal To *** //
 	bool& operator>=(const CircularInt& other);
 	bool& operator>=(const int& other);
 	friend bool& operator>=(const int& a, CircularInt b);
 
-	// *** Less Than Or Equal To *** //
+			// *** Less Than Or Equal To *** //
 	bool& operator<=(const CircularInt& other);
 	bool& operator<=(const int& other);
 	friend bool& operator<=(const int& a, CircularInt b);
-
-	// *** Insertion to stream *** //
+	
+		// *** Streams *** //
+			// *** Insertion to stream *** //
 	friend ostream& operator<<(ostream& out, const CircularInt& cirInt);
 
-	// *** Extraction from stream *** //
+			// *** Extraction from stream *** //
 	friend istream& operator>>(istream& in, const CircularInt& cirInt);
 
 };
