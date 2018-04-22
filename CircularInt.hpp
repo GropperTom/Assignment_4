@@ -103,7 +103,7 @@ public:
 			// *** Right Shift *** //
 	CircularInt operator>>(const CircularInt& other);
 	CircularInt operator>>(const int& other);
-	friend CircularInt& operator>>(const int& a, CircularInt b);
+	friend CircularInt operator>>(const int& a, CircularInt b);
 
 			// *** Compound AND *** //
 	CircularInt& operator&=(const CircularInt& other);
