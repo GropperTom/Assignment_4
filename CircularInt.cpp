@@ -1,54 +1,55 @@
 #include "CircularInt.hpp"
 
+using namespace std;
+
 CircularInt::CircularInt(int min, int max) {}
-CircularInt::CircularInt() {}
 CircularInt& CircularInt::operator=(const CircularInt & other)
 {
-	return CircularInt();
+	return *this;
 }
 CircularInt CircularInt::operator+(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator+(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator-(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator-(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator-()
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator*(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator*(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator/(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator/(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator%(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator%(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt & CircularInt::operator+=(const CircularInt & other)
 {
@@ -96,7 +97,7 @@ CircularInt & CircularInt::operator++()
 }
 CircularInt CircularInt::operator++(int)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt & CircularInt::operator--()
 {
@@ -104,51 +105,51 @@ CircularInt & CircularInt::operator--()
 }
 CircularInt CircularInt::operator--(int)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator&(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator&(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator|(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator|(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator^(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator^(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator~()
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator<<(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator<<(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator>>(const CircularInt & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt CircularInt::operator>>(const int & other)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 CircularInt & CircularInt::operator&=(const CircularInt & other)
 {
@@ -247,47 +248,47 @@ CircularInt operator+(const int & a, CircularInt b)
 
 CircularInt operator-(const int & a, CircularInt b)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 
 CircularInt operator*(const int & a, CircularInt b)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 
 CircularInt operator/(const int & a, CircularInt b)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 
 CircularInt operator%(const int & a, CircularInt b)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 
 CircularInt operator&(const int & a, CircularInt b)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 
 CircularInt operator|(const int & a, CircularInt b)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 
 CircularInt operator^(const int & a, CircularInt b)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 
 CircularInt operator<<(const int & a, CircularInt b)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 
 CircularInt operator>>(const int & a, CircularInt b)
 {
-	return CircularInt();
+	return CircularInt(1, 12);
 }
 
 bool operator==(const int & a, CircularInt b)
