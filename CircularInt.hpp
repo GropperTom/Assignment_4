@@ -2,9 +2,6 @@
 
 using namespace std;
 
-class ostream;
-class istream;
-
 class CircularInt {
 
 	int min;
