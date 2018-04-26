@@ -1,332 +1,503 @@
 #include "CircularInt.hpp"
 
 using namespace std;
-
-CircularInt::CircularInt(int min, int max) {}
-CircularInt& CircularInt::operator=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt CircularInt::operator+(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator+(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator-(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator-(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator-()
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator*(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator*(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator/(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator/(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator%(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator%(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt & CircularInt::operator+=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator+=(const int & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator-=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator-=(const int & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator*=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator*=(const int & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator/=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator/=(const int & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator%=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator%=(const int & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator++()
-{
-	return *this;
-}
-CircularInt CircularInt::operator++(int)
-{
-	return CircularInt(1, 12);
-}
-CircularInt & CircularInt::operator--()
-{
-	return *this;
-}
-CircularInt CircularInt::operator--(int)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator&(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator&(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator|(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator|(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator^(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator^(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator~()
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator<<(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator<<(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator>>(const CircularInt & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt CircularInt::operator>>(const int & other)
-{
-	return CircularInt(1, 12);
-}
-CircularInt & CircularInt::operator&=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator&=(const int & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator|=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator|=(const int & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator^=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator^=(const int & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator<<=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator<<=(const int & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator>>=(const CircularInt & other)
-{
-	return *this;
-}
-CircularInt & CircularInt::operator>>=(const int & other)
-{
-	return *this;
-}
-bool CircularInt::operator==(const CircularInt & other)
-{
-	return false;
-}
-bool CircularInt::operator==(const int & other)
-{
-	return false;
-}
-bool CircularInt::operator!=(const CircularInt & other)
-{
-	return false;
-}
-bool CircularInt::operator!=(const int & other)
-{
-	return false;
-}
-bool CircularInt::operator>(const CircularInt & other)
-{
-	return false;
-}
-bool CircularInt::operator>(const int & other)
-{
-	return false;
-}
-bool CircularInt::operator<(const CircularInt & other)
-{
-	return false;
-}
-bool CircularInt::operator<(const int & other)
-{
-	return false;
-}
-bool CircularInt::operator>=(const CircularInt & other)
-{
-	return false;
-}
-bool CircularInt::operator>=(const int & other)
-{
-	return false;
-}
-bool CircularInt::operator<=(const CircularInt & other)
-{
-	return false;
-}
-bool CircularInt::operator<=(const int & other)
-{
-	return false;
-}
-;
-
-CircularInt operator+(const int & a, CircularInt b)
-{
-	return b;
+// *** Constructors *** //
+CircularInt::CircularInt(int min, int max) {
+	if (min < max) {
+		this->min = min;
+		this->max = max;
+	}
+	// im not sure what to do if min >= max.
 }
 
-CircularInt operator-(const int & a, CircularInt b)
-{
-	return CircularInt(1, 12);
+CircularInt::CircularInt(const CircularInt& other) {
+	if (*this != other) {
+		min = other.min;
+		max = other.max;
+		value = other.value;
+	}
 }
 
-CircularInt operator*(const int & a, CircularInt b)
-{
-	return CircularInt(1, 12);
+// *** Public Methods *** //
+int CircularInt::getValue() { return value; }
+
+// *** Private Methods *** //
+int CircularInt::calcVal() {
+	if (value < min || max < value) {
+		value = (value - min) % (max - min);
+		if (value >= 0) value += min;
+		else value = (max - value) + min;
+	}
 }
 
-CircularInt operator/(const int & a, CircularInt b)
-{
-	return CircularInt(1, 12);
+// *** Operators *** //
+	// *** Arithmetic *** //
+		// *** Addition *** //
+CircularInt CircularInt::operator+(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value += other.value;
+	ret.calcVal();
+	return ret;
 }
 
-CircularInt operator%(const int & a, CircularInt b)
-{
-	return CircularInt(1, 12);
+CircularInt CircularInt::operator+(const int & other) {
+	CircularInt ret = *this;
+	ret.value += other;
+	ret.calcVal();
+	return ret;
 }
 
-CircularInt operator&(const int & a, CircularInt b)
-{
-	return CircularInt(1, 12);
+int operator+(const int & a, CircularInt b) {
+	return a + b.value;
 }
 
-CircularInt operator|(const int & a, CircularInt b)
-{
-	return CircularInt(1, 12);
+		// *** Substraction *** //
+CircularInt CircularInt::operator-(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value -= other.value;
+	ret.calcVal();
+	return ret;
 }
 
-CircularInt operator^(const int & a, CircularInt b)
-{
-	return CircularInt(1, 12);
+CircularInt CircularInt::operator-(const int & other) {
+	CircularInt ret = *this;
+	ret.value -= other;
+	ret.calcVal();
+	return ret;
 }
 
-CircularInt operator<<(const int & a, CircularInt b)
-{
-	return CircularInt(1, 12);
+int operator-(const int & a, CircularInt b) {
+	return a - b.value;
 }
 
-CircularInt operator>>(const int & a, CircularInt b)
-{
-	return CircularInt(1, 12);
+		// *** Negative *** //
+CircularInt CircularInt::operator-() {
+	CircularInt ret = *this;
+	ret.value = -ret.value;
+	ret.calcVal();
+	return ret;
 }
 
-bool operator==(const int & a, CircularInt b)
-{
-	return false;
+		// *** Multiplication *** //
+CircularInt CircularInt::operator*(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value *= other.value;
+	ret.calcVal();
+	return ret;
 }
 
-bool operator!=(const int & a, CircularInt b)
-{
-	return false;
+CircularInt CircularInt::operator*(const int & other) {
+	CircularInt ret = *this;
+	ret.value *= other;
+	ret.calcVal();
+	return ret;
 }
 
-bool operator>(const int & a, CircularInt b)
-{
-	return false;
+int operator*(const int & a, CircularInt b) {
+	return a * b.value;
 }
 
-bool operator<(const int & a, CircularInt b)
-{
-	return false;
+		// *** Division *** //
+CircularInt CircularInt::operator/(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value /= other.value;
+	ret.calcVal();
+	return ret;
 }
 
-bool operator>=(const int & a, CircularInt b)
-{
-	return false;
+CircularInt CircularInt::operator/(const int & other) {
+	CircularInt ret = *this;
+	ret.value /= other;
+	ret.calcVal();
+	return ret;
 }
 
-bool operator<=(const int & a, CircularInt b)
-{
-	return false;
+int operator/(const int & a, CircularInt b) {
+	return a / b.value;
 }
 
-ostream & operator<<(ostream & out, const CircularInt & cirInt)
-{
+		// *** Modulus *** //
+CircularInt CircularInt::operator%(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value %= other.value;
+	ret.calcVal();
+	return ret;
+}
+
+CircularInt CircularInt::operator%(const int & other) {
+	CircularInt ret = *this;
+	ret.value %= other;
+	ret.calcVal();
+	return ret;
+}
+
+int operator%(const int & a, CircularInt b) {
+	return a % b.value;
+}
+
+		// *** Compound Addition *** //
+CircularInt & CircularInt::operator+=(const CircularInt & other) {
+	value += other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator+=(const int & other) {
+	value += other;
+	calcVal();
+	return *this;
+}
+
+		// *** Compound Substraction *** //
+CircularInt & CircularInt::operator-=(const CircularInt & other) {
+	value -= other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator-=(const int & other) {
+	value -= other;
+	calcVal();
+	return *this;
+}
+
+		// *** Compound Multiplication *** //
+CircularInt & CircularInt::operator*=(const CircularInt & other) {
+	value *= other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator*=(const int & other) {
+	value *= other;
+	calcVal();
+	return *this;
+}
+
+		// *** Compound Division *** //
+CircularInt & CircularInt::operator/=(const CircularInt & other) {
+	value /= other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator/=(const int & other) {
+	value /= other;
+	calcVal();
+	return *this;
+}
+
+		// *** Compound Modulus *** //
+CircularInt & CircularInt::operator%=(const CircularInt & other) {
+	value %= other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator%=(const int & other) {
+	value %= value;
+	calcVal();
+	return *this;
+}
+
+		// *** Increment *** //
+CircularInt & CircularInt::operator++() {
+	++value;
+	calcVal();
+	return *this;
+}
+
+CircularInt CircularInt::operator++(int) {
+	CircularInt ret = *this;
+	++value;
+	calcVal();
+	return ret;
+}
+
+		// *** Decrement *** //
+CircularInt & CircularInt::operator--() {
+	--value;
+	calcVal();
+	return *this;
+}
+
+CircularInt CircularInt::operator--(int) {
+	CircularInt ret = *this;
+	--value;
+	calcVal();
+	return ret;
+}
+
+	// *** Bitwise *** //
+		// *** AND *** //
+CircularInt CircularInt::operator&(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value &= other.value;
+	ret.calcVal();
+	return ret;
+}
+
+CircularInt CircularInt::operator&(const int & other) {
+	CircularInt ret = *this;
+	ret.value &= other;
+	ret.calcVal();
+	return ret;
+}
+
+int operator&(const int & a, CircularInt b) {
+	return a & b.value;
+}
+
+		// *** OR *** //
+CircularInt CircularInt::operator|(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value |= other.value;
+	ret.calcVal();
+	return ret;
+}
+
+CircularInt CircularInt::operator|(const int & other) {
+	CircularInt ret = *this;
+	ret.value |= other;
+	ret.calcVal();
+	return ret;
+}
+
+int operator|(const int & a, CircularInt b) {
+	return a | b.value;
+}
+
+		// *** XOR *** //
+CircularInt CircularInt::operator^(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value ^= other.value;
+	ret.calcVal();
+	return ret;
+}
+
+CircularInt CircularInt::operator^(const int & other) {
+	CircularInt ret = *this;
+	ret.value ^= other;
+	ret.calcVal();
+	return ret;
+}
+
+int operator^(const int & a, CircularInt b) {
+	return a ^ b.value;
+}
+
+		// *** Ones Complement *** //
+CircularInt CircularInt::operator~() {
+	CircularInt ret = *this;
+	~ret.value;
+	ret.calcVal();
+	return ret;
+}
+
+		// *** Left Shift *** //
+CircularInt CircularInt::operator<<(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value <<= other.value;
+	ret.calcVal();
+	return ret;
+}
+
+CircularInt CircularInt::operator<<(const int & other) {
+	CircularInt ret = *this;
+	ret.value <<= other;
+	ret.calcVal();
+	return ret;
+}
+
+int operator<<(const int & a, CircularInt b) {
+	return a << b.value;
+}
+
+		// *** Right Shift *** //
+CircularInt CircularInt::operator>>(const CircularInt & other) {
+	CircularInt ret = *this;
+	ret.value >>= other.value;
+	ret.calcVal();
+	return ret;
+}
+
+CircularInt CircularInt::operator>>(const int & other) {
+	CircularInt ret = *this;
+	ret.value >>= other;
+	ret.calcVal();
+	return ret;
+}
+
+int operator>>(const int & a, CircularInt b) {
+	return a >> b.value;
+}
+
+		// *** Compound AND *** //
+CircularInt & CircularInt::operator&=(const CircularInt & other) {
+	value &= other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator&=(const int & other) {
+	value &= other;
+	calcVal();
+	return *this;
+}
+
+		// *** Compound OR *** //
+CircularInt & CircularInt::operator|=(const CircularInt & other) {
+	value |= other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator|=(const int & other) {
+	value |= other;
+	calcVal();
+	return *this;
+}
+
+		// *** Compound XOR *** //
+CircularInt & CircularInt::operator^=(const CircularInt & other) {
+	value ^= other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator^=(const int & other) {
+	value ^= other;
+	calcVal();
+	return *this;
+}
+
+		// *** Compound Left Shift *** //
+CircularInt & CircularInt::operator<<=(const CircularInt & other) {
+	value <<= other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator<<=(const int & other) {
+	value <<= other;
+	calcVal();
+	return *this;
+}
+
+		// *** Compound Right Shift *** //
+CircularInt & CircularInt::operator>>=(const CircularInt & other) {
+	value >>= other.value;
+	calcVal();
+	return *this;
+}
+
+CircularInt & CircularInt::operator>>=(const int & other) {
+	value >>= other;
+	calcVal();
+	return *this;
+}
+
+	// *** Relational *** //
+		// *** Equality *** //
+bool CircularInt::operator==(const CircularInt & other) {
+	return value == other.value;
+}
+
+bool CircularInt::operator==(const int & other) {
+	return value == other;
+}
+
+bool operator==(const int & a, CircularInt b) {
+	return a == b.value;
+}
+
+		// *** Inequality *** //
+bool CircularInt::operator!=(const CircularInt & other) {
+	return value != other.value;
+}
+
+bool CircularInt::operator!=(const int & other) {
+	return value != other;
+}
+
+bool operator!=(const int & a, CircularInt b) {
+	return a != b.value;
+}
+
+		// *** Greater Than *** //
+bool CircularInt::operator>(const CircularInt & other) {
+	return value > other.value;
+}
+
+bool CircularInt::operator>(const int & other) {
+	return value > other;
+}
+
+bool operator>(const int & a, CircularInt b) {
+	return a > b.value;
+}
+
+		// *** Less Than *** //
+bool CircularInt::operator<(const CircularInt & other) {
+	return value < other.value;
+}
+
+bool CircularInt::operator<(const int & other) {
+	return value < other;
+}
+
+bool operator<(const int & a, CircularInt b) {
+	return a < b.value;
+}
+
+		// *** Greater Than Or Equal To *** //
+bool CircularInt::operator>=(const CircularInt & other) {
+	return value >= other.value;
+}
+
+bool CircularInt::operator>=(const int & other) {
+	return value >= other;
+}
+
+bool operator>=(const int & a, CircularInt b) {
+	return a >= b.value;
+}
+
+		// *** Less Than OR Equal To *** //
+bool CircularInt::operator<=(const CircularInt & other) {
+	return value <= other.value;
+}
+
+bool CircularInt::operator<=(const int & other) {
+	return value <= other;
+}
+
+bool operator<=(const int & a, CircularInt b) {
+	return a <= b.value;
+}
+
+	// *** Streams *** //
+		// *** Insertion To Stream *** //
+ostream & operator<<(ostream & out, const CircularInt & cirInt) {
+	out << "(" << cirInt.min << ", " << cirInt.max << ", " << cirInt.value << ")";
 	return out;
 }
+		
+		// *** Extraction From Stream *** //
+istream & operator>>(istream & in, CircularInt & cirInt) {
+	int min, max, value;
 
-istream & operator>>(istream & in, const CircularInt & cirInt)
-{
-	return in;
+	in.ignore(1);
+	in >> min;
+	cirInt.min = min;
+
+	in.ignore(2);
+	in >> max;
+	cirInt.max = max;
+
+	in.ignore(2);
+	in >> value;
+	cirInt.max = value;
+
+	in.ignore(1);
 }
