@@ -12,7 +12,6 @@ class CircularInt {
 	int value;
 
 	// *** Methods *** //
-
 	int calcVal();
 
 public:
@@ -168,7 +167,6 @@ public:
 	friend istream& operator>>(istream& in, CircularInt& cirInt);
 
 	// *** Methods *** //
-
 	int getValue();
 
 };
