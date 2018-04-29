@@ -25,11 +25,10 @@ int CircularInt::getValue() { return value; }
 
 // *** Private Methods *** //
 void CircularInt::calcVal() {
-	if (value < min || max < value) {
-		value = ((value - max - 1) % (max - min + 1));
-		if (value >= 0) value += min;
-		else value = (max + value) + min;
+	while (value < 0) {
+		value = value + max - min + 1;
 	}
+	value = value % (max - min + 1) + min - 1;
 }
 
 // *** Operators *** //
