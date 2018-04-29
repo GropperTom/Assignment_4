@@ -209,7 +209,8 @@ CircularInt & CircularInt::operator*=(const int other) {
 
 		// *** Compound Division *** //
 CircularInt & CircularInt::operator/=(const CircularInt & other) {
-	return *this / other.value;
+	*this /= other.value;
+	return *this;
 }
 
 CircularInt & CircularInt::operator/=(const int other) {
