@@ -209,15 +209,24 @@ CircularInt & CircularInt::operator*=(const int other) {
 
 		// *** Compound Division *** //
 CircularInt & CircularInt::operator/=(const CircularInt & other) {
-	value /= other.value;
-	calcVal();
-	return *this;
+	return *this / other.value;
 }
 
 CircularInt & CircularInt::operator/=(const int other) {
-	value /= other;
-	calcVal();
-	return *this;
+	if (other == 0) {
+		throw std::string("received zero!");
+	}
+	else {
+		for (int i = min; i <= max; i++) {
+			value = i;
+			calcVal();
+			if (value * other == value) {
+				return *this;
+			}
+		}
+	}
+	string msg = "There is no number x in {" + to_string(min) + "," + to_string(max) + "} such that x*" + to_string(other) + "=" + to_string(value);
+	throw std::string(msg);
 }
 
 		// *** Compound Modulus *** //
