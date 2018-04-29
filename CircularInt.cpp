@@ -448,7 +448,7 @@ CircularInt & CircularInt::operator>>=(const int other) {
 	// *** Relational *** //
 		// *** Equality *** //
 bool CircularInt::operator==(const CircularInt & other) {
-	return value == other.value;
+	return value == other.value && min == other.min && max == other.max;
 }
 
 bool CircularInt::operator==(const int other) {
@@ -461,7 +461,7 @@ bool operator==(const int a, CircularInt b) {
 
 		// *** Inequality *** //
 bool CircularInt::operator!=(const CircularInt & other) {
-	return value != other.value;
+	return !(value == other.value);
 }
 
 bool CircularInt::operator!=(const int other) {
