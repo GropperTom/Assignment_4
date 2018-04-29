@@ -124,19 +124,19 @@ CircularInt CircularInt::operator/(const CircularInt & other) {
 CircularInt CircularInt::operator/(const int other) {
 	CircularInt ret = *this;
 	if (other == 0) {
-		throw std::invalid_argument("received zero!");
+		throw std::string("received zero!");
 	}
 	else {
 		for (int i = ret.min; i <= ret.max; i++) {
-			ret.value = i * other;
+			ret.value = i;
 			ret.calcVal();
-			if (ret.value == value) {
+			if (ret.value * other == value) {
 				return ret;
 			}
 		}
 	}
 	string msg = "There is no number x in {" + to_string(min) + "," + to_string(max) + "} such that x*" + to_string(other) + "=" + to_string(value);
-	throw std::invalid_argument(msg);
+	throw std::string(msg);
 }
 
 CircularInt operator/(const int a, CircularInt b) {
